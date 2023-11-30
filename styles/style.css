@@ -20,10 +20,6 @@ a {
   text-decoration: none;
 }
 
-.content__video-card-description {
-  text-decoration: none;
-}
-
 ul,
 ol {
   list-style: none;
@@ -70,8 +66,8 @@ video {
 /* Всё , что внутри страницы */
 .content {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  inline-size: 1170px;
+  justify-content: space-around;
 }
 
 .result {
@@ -103,7 +99,7 @@ video {
   font-size: 18px;
   font-weight: 700;
   border: 1px solid #fff;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .search-form__submit-button {
@@ -170,7 +166,7 @@ video {
   font-weight: inherit;
 }
 
-.search-form__fieldset-title:hover {
+.search-form__fieldset-title {
   cursor: default;
 }
 
@@ -272,18 +268,17 @@ input[type="checkbox"]:checked + span {
 
 .content__list {
   height: 300px;
-  width: 415px;
+  width: 402px;
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
   display: flex;
   flex-direction: column;
-
   padding: 2px;
 }
 
-.content__list-item {
-  padding: 2px;
+.content__list-webkit-scrollbar {
+  width: 0;
 }
 
 .content__list-item:not(:last-child) {
@@ -311,13 +306,13 @@ input[type="checkbox"]:checked + span {
 }
 
 .content__video-card-description {
+  text-decoration: none;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 16.4px;
-  text-wrap: wrap;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -329,7 +324,7 @@ input[type="checkbox"]:checked + span {
   flex-direction: column;
   gap: 2px;
   text-align: start;
-  max-width: 170px;
+  max-width: 185px;
 }
 
 .content__video-card-thumbnail {
@@ -344,12 +339,13 @@ input[type="checkbox"]:checked + span {
   justify-content: space-between;
 }
 
-.content__list-item:has(.content__card-link_current) {
+.content__card-link_current {
   background-color: #545050;
 }
 
 .content__card-link {
   display: block;
+  padding: 2px;
 }
 
 /*Focus*/
